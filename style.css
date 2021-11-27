@@ -1,0 +1,345 @@
+/* @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+html{
+    direction: rtl;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+body {
+    background: #ececec;
+    line-height: 1.5em;
+}
+ */
+.tabs {
+    background: #1c91af;
+    height: 200px;
+    position: relative;
+/*لإخفاء أي جزء سيكون خدود الحاوية*/
+    overflow: hidden;
+}
+.tab-switch {
+    display: none;
+}
+.tab-content {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 1;
+    background: white;
+    color:#545454;
+    padding: 10px;
+    height: 200px;
+    text-align: justify;
+    transition: all 0.35s;
+    overflow:hidden;
+}
+
+.tab-label {
+    float: right;
+    padding: 10px 25px;
+    height: 50px;
+    background: #1c91af;
+    color: #fff;
+    border-left: 2px solid #187790;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.35s;
+}
+.tab-label:hover {
+    top: 3px;
+    transition: top 0.25s;
+}
+.tab-switch:checked + .tab-label {
+    background: #fff;
+    color: #545454;
+    top: -5;
+    transition: all 0.35s;
+}
+.tab-switch:checked + label + .tab-content {
+    visibility: visible;
+    transition: all 0.35s;
+}
+
+
+
+
+
+
+.btn {
+    background: #e34444;
+    width: 140px;
+    height: 60px;
+    position: relative;
+/*تقوم بإخفاء كل محتوى سيكون خارج حدود الزر */
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 0px;
+/*تغيير شكل المؤشر عند التأشير على الزر*/
+    cursor: pointer;
+}
+.btn img {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 5px;
+    transition: all .3s ease;
+}
+.btn span.title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: all .3s ease .3s;
+}
+.btn span.desc {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    bottom: 3px;
+    right: -50%;
+    transition: all .3s ease .3s;
+}
+.btn:hover {
+    background: #e55959;
+}
+
+.btn:hover span.desc {
+    right: 20px;
+    transition: all .3s ease .3s;
+}
+
+.btn:hover span.title {
+    top: 10px;
+    transition: all .3s ease .3s;
+}
+
+.btn img.over {
+    z-index: 99;
+    opacity: 0,25;
+    transition: all 3s ease;
+}
+
+.btn:hover img.over {
+    transform: scale(5) rotate(350deg);
+    opacity: 0;
+}
+
+img.source {
+    position: fixed;
+    bottom: 0;
+        right: 0;
+}
+
+
+
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+html{
+ direction: rtl;
+ font-family: 'Droid Arabic Kufi', sans-serif;
+}
+body{
+    background: #009689;
+    color: #fff;
+}
+.wrapper{
+    max-width: 100%;
+    height: 500px;
+}
+.loading{
+    display: table;
+     margin: 50px auto;
+}
+[class^='dot']{ opacity: 0; }
+.dot1{ animation: dot1 5s infinite; }
+.dot2{ animation: dot2 5s infinite; }
+.dot3{ animation: dot3 5s infinite; }
+
+.circle1{
+    height: 200px;
+    width: 200px;
+    border: 7px dotted #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+    animation: rotate360 5s infinite;
+}
+
+.circle2{
+    margin:  20px auto;
+    height: 150px;
+    width: 150px;
+    border: 5px dotted #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    animation: rotateX 5s infinite;
+}
+
+.circle3{
+    height: 90px;
+    width: 90px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    animation: lighting 5s infinite;
+}
+
+@keyframes dot1{
+    0%{ opacity: 0; }
+    20%{ opacity: 0; }
+    30%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+@keyframes dot2{
+    0%{ opacity: 0; }
+    40%{ opacity: 0; }
+    60%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+@keyframes dot3{
+    0%{ opacity: 0; }
+    60%{ opacity: 0; }
+    90%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+
+@keyframes rotate360{
+    0%{ transform: rotate(0) }
+    100% { transform: rotate(360deg) }
+}
+@keyframes rotateX{
+    0%{ transform: rotateX(0) }
+    60% { transform: rotateX(45deg)}
+    100% { transform: rotateX(0)}
+}
+@keyframes lighting{
+    0%{ opacity: 1 }
+    20% { opacity: 1}
+    30% { opacity: .25}
+    40% { opacity: 1}
+    50% { opacity: .25}
+    60% { opacity: 1}
+    70% { opacity: .25}
+    80% { opacity: 1}
+    1000% { opacity: 1}
+}
+
+img.source {
+  position: fixed;
+  top: 0;
+}
+
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /*  animation: rotate 5s infinite;*/
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    30% {
+        transform: rotate(111deg);
+        background: yellow;
+        height: 140px;
+        width: 140px;
+    }
+    60% {
+        transform: rotate(55deg);
+        background: blue;
+        height: 180px;
+        width: 180px;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: orange;
+        height: 200px;
+        width: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, Tahoma;
+  }
+  
+  /* For Demo Only */
+  .box {
+    background-color: #eee;
+    margin: 40px auto;
+    width: 800px;
+    height: 300px;
+    position: relative;
+  }
+  .box:before {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    margin-left: -2px;
+  }
+  .box:after {
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    margin-top: -2px;
+  }
+  .box:before,
+  .box:after {
+    content: "";
+    background-color: #ddd;
+    position: absolute;
+  }
+  .box .item {
+    background-color: #f00;
+    width: 200px;
+    height: 100px;
+  }
+  /* For Demo Only */
+  
+  /* Margin + Position */
+  .box .item {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -50px;
+    top: 50%;
+    z-index: 2;
+  }
+  
+  /* Margin + Transform */
+  .box .item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  /* Flex */
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
